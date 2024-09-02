@@ -2,8 +2,8 @@ import { Link, useNavigate } from "react-router-dom/dist";
 import { AppRoute, KeyLocalStorage } from "../const";
 import React, { SyntheticEvent, useEffect, useState } from "react";
 import { TProducts } from "../type/product";
-import { useAppDispatch } from "../type/indexStore";
-import { actionsProduct } from "../store/slice/product";
+import { useAppDispatch, useAppSelector } from "../type/indexStore";
+import { actionsProduct, selectorsProduct } from "../store/slice/product";
 import { addAndDeleteValueToLocalStorage, getDataLocalStorage } from "../utils";
 
 type TProduct = {
@@ -14,6 +14,7 @@ export default function Product({ product }: TProduct) {
   const [ isLike, setIsLike ] = useState<boolean>(false);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const filterSettings = useAppSelector(selectorsProduct.filterSetting);
   const idProduct = getDataLocalStorage(KeyLocalStorage.LIKE);
   let idProductNumber: number[] = [];
   if (idProduct) {
@@ -28,7 +29,10 @@ export default function Product({ product }: TProduct) {
 
   function onEvaluateProduct() {
     addAndDeleteValueToLocalStorage(KeyLocalStorage.LIKE, product.gameID);
-    setIsLike(!isLike)
+    setIsLike(!isLike);
+    if (filterSettings.like) {
+      dispatch(actionsProduct.filterProduct({like: true}));
+    }
   }
 
   function onDeleteProduct(evt: SyntheticEvent<HTMLButtonElement>) {
@@ -45,6 +49,7 @@ export default function Product({ product }: TProduct) {
   }
 
   return (
+    <>    
     <li className="products__item" onClick={onOpenPageProductClick}>
       <img src={product.thumb} alt={product.title} className="products__preview" width={320} height={300} />
       <h3 className="products__title">
@@ -71,5 +76,7 @@ export default function Product({ product }: TProduct) {
         <span className="visually-hidden">Редактировать</span>
       </Link>
     </li>
+    
+    </>
   )
 }

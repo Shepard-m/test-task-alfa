@@ -4,15 +4,21 @@ import { AppRoute } from "../const";
 import ListProduct from "../components/list-products";
 import { useEffect, useState } from "react";
 import React from "react";
-import { useAppDispatch } from "../type/indexStore";
+import { useAppDispatch, useAppSelector } from "../type/indexStore";
 import { fetchGetProducts } from "../store/api-store";
-import { actionsProduct } from "../store/slice/product";
+import { actionsProduct, selectorsProduct } from "../store/slice/product";
+import EmptyProducts from "./empty-products";
 
 export default function ProductsPage() {
   const dispatch = useAppDispatch();
+  const filterProducts = useAppSelector(selectorsProduct.productsFilter)
   const [isFilter, setIsFilter] = useState<boolean>(false);
   useEffect(() => {
-    dispatch(fetchGetProducts());
+    dispatch(fetchGetProducts())
+    .unwrap()
+    .then(() => {
+      dispatch(actionsProduct.initialState())
+    });
   }, [])
 
   function onFilterProduct() {
@@ -44,7 +50,12 @@ export default function ProductsPage() {
         </div>
       </div>
       <div className="main__content">
-        <ListProduct />
+        {filterProducts.length === 0 
+          ?
+          <EmptyProducts />
+          :
+          <ListProduct />
+        }
       </div>
       </>
     </Container>

@@ -15,7 +15,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className="header__item">
-                <Link to={AppRoute.INDEX} href className="header__link">
+                <Link to={AppRoute.CREATE_PRODUCT} href className="header__link">
                   Создать продукт
                 </Link>
               </li>

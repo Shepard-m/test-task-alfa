@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom/dist";
 import { AppRoute } from "../const";
 import { useAppDispatch, useAppSelector } from "../type/indexStore";
 import { fetchGetProducts } from "../store/api-store";
-import { selectorsProduct } from "../store/slice/product";
+import { actionsProduct, selectorsProduct } from "../store/slice/product";
 
 export default function ProductPage() {
   const { gameId } = useParams();
@@ -13,7 +13,12 @@ export default function ProductPage() {
   const product = products.find((element) => element.gameID === gameId);
 
   useEffect(() => {
-    dispatch(fetchGetProducts());
+    dispatch(fetchGetProducts())
+    .unwrap()
+    .then(() => {
+      console.log('k')
+      dispatch(actionsProduct.initialState())
+    });
   }, [])
 
   return (
