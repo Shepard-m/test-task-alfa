@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { BrowserRouter, ru } from 'react-router-dom/dist';
+import { BrowserRouter } from 'react-router-dom/dist';
 import App from './App.tsx'
 import './index.css'
 import { HelmetProvider } from 'react-helmet-async'
