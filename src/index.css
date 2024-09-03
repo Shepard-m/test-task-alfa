@@ -258,7 +258,7 @@ body {
   left: 3px;
   width: 12px;
   height: 9px;
-  background-image: url(../../src/assets/check.svg);
+  background-image: url(./img/check.svg);
   background-repeat: no-repeat;
 }
 
@@ -281,7 +281,7 @@ body {
 .pagination__item:not(:last-child)::after {
   content: '';
   position: absolute;
-  background-image: url(../../src/assets/icon-arrow-mini.svg);
+  background-image: url(./img/icon-arrow-mini.svg);
   top: 6px;
   right: -17px;
   width: 5px;
@@ -361,13 +361,13 @@ body {
   top: 0px;
   left: 0;
   background-color: transparent;
-  background-image: url(../../src/assets/like.svg); 
+  background-image: url(./img/like.svg); 
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
 .products__like--active::before {
-  background-image: url(../../src/assets/like-active.svg);
+  background-image: url(./img/like-active.svg);
 }
 
 .products__button {
@@ -382,7 +382,7 @@ body {
   top: 2px;
   right: 2px;
   background-color: transparent;
-  background-image: url(../../src/assets/delete.png); 
+  background-image: url(./img/delete.png); 
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -395,7 +395,7 @@ body {
   left: 4px;
   background-color: transparent;
   border: none;
-  background-image: url(../../src/assets/edit.png); 
+  background-image: url(./img/assets/edit.png); 
   background-repeat: no-repeat;
   order: 6;
   cursor: pointer;
@@ -581,7 +581,7 @@ body {
   cursor: pointer;
 }
 .modal__close::before {
-  content: url(../../src/assets/close.svg);
+  content: url(./img/close.svg);
   width: 20px;
   height: 20px;
 }

@@ -28,7 +28,7 @@ export default function Header() {
     <header className="header">
       <div className="container">
         <div className="header__content">
-          <img src="../src/assets/game-logo.jpg" width={20} height={20} alt="Logo" className="header__logo" />
+          <img src="./img/game-logo.jpg" width={20} height={20} alt="Logo" className="header__logo" />
           <div className="header__left">
             <ul className="header__list">
               <li className="header__item">
