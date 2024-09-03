@@ -395,7 +395,7 @@ body {
   left: 4px;
   background-color: transparent;
   border: none;
-  background-image: url(./img/assets/edit.png); 
+  background-image: url(./img/edit.png); 
   background-repeat: no-repeat;
   order: 6;
   cursor: pointer;
