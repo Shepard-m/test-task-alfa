@@ -1,7 +1,8 @@
 export const AppRoute = {
   INDEX: '/',
   PRODUCT: '/product',
-  CREATE_PRODUCT: '/create-product'
+  CREATE_PRODUCT: '/create-product',
+  NOT_FOUND_PAGE: '*',
 }
 
 export const ApiRoute = {

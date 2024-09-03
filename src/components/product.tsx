@@ -128,7 +128,7 @@ export default function Product({ product }: TProduct) {
         <span className={`products__like ${isLike && 'products__like--active'}`} onClick={onEvaluateProduct}/>
         <div className="products__review">
           <Link to={`https://www.metacritic.com${product.metacriticLink}`}>
-          <img src="../src/assets/metacritic.svg" width={32} height={32} alt={'metacritic'} className="products__review-platform" />
+          <img src="./img/metacritic.svg" width={32} height={32} alt={'metacritic'} className="products__review-platform" />
           </Link>
           <span className="products__review-count">{product.metacriticScore}</span>
         </div>

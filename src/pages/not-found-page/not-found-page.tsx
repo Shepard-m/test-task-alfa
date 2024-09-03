@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './not-found-page-style.css';
 import { AppRoute } from '../../const';
+import React from 'react';
 export default function NotFoundPage() {
   return (
     <div className="container-not-page" data-testId={'not-found-page'}>
