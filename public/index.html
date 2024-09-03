@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Test-Task-Alfa</title>
+</head>
+
+<body class="scroll-lock">
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <img src="/src/assets/game-logo.jpg" width="20" height="20" alt="Logo" class="header__logo">
+        <div class="header__left">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="" class="header__link">
+                Главная
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="" class="header__link">
+                Создать продукт
+              </a>
+            </li>
+          </ul>
+          <div class="form-search">
+            <form>
+              <label>
+                <svg class="form-search__icon" width="16" height="16" aria-hidden="true">
+                  <use xlink:href="#icon-lens" />
+                </svg>
+                <input class="form-search__input" autocomplete="off" placeholder="Поиск по сайту" type="text">
+                <ul class="form-search__select-list">
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 8i</li>
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 7i</li>
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 6i</li>
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 5i</li>
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 4i</li>
+                </ul>
+              </label>
+            </form>
+            <button class="form-search__reset">
+              <svg width="10" height="10" aria-hidden="true">
+                <use xlink:href="#icon-close" />
+              </svg>
+              <span class="visually-hidden">
+                Сбросить поиск
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="main__top">
+        <div class="pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a href="" class="pagination__link">
+                Главная
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a href="" class="pagination__link">
+                Главная
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a href="" class="pagination__link">
+                Главная
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="filter">
+          <h2 class="filter__title">Фильтр:</h2>
+          <div class="filter__row">
+            <input type="checkbox" class="filter__input visually-hidden" id="like" name="like">
+            <label for="like" class="filter__label">
+              Избранные
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="main__content">
+        <!-- <ul class="products">
+          <li class="products__item">
+            <img src="../src/assets/just-cause-2.png" alt="" class="products__preview" width="320" height="300">
+            <h3 class="products__title">
+              just-cause-2
+            </h3>
+            <p class="products__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolorem quia eligendi explicabo quod
+              molestiae tenetur officiis saepe sint deserunt nemo iste ipsum alias? Quaerat, quod. Exercitationem,
+              maiores eligendi! Totam!
+            </p>
+            <div class="products__info">
+              <span class="products__like"></span>
+              <div class="products__review">
+                <img src="../src/assets/metacritic.svg" width="32" height="32" alt="" class="products__review-platform">
+                <span class="products__review-count">333</span>
+              </div>
+            </div>
+            <button class="products__button products__button--delete">
+              <span class="visually-hidden">Удалить</span>
+            </button>
+            <a href="" class="products__button products__button--edit">
+              <span class="visually-hidden">Редактировать</span>
+            </a>
+          </li>
+          <li class="products__item">
+            <img src="../src/assets/just-cause-2.png" alt="" class="products__preview" width="320" height="300">
+            <h3 class="products__title">
+              just-cause-2
+            </h3>
+            <p class="products__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolorem quia eligendi explicabo quod
+              molestiae tenetur officiis saepe sint deserunt nemo iste ipsum alias? Quaerat, quod. Exercitationem,
+              maiores eligendi! Totam!
+            </p>
+            <div class="products__info">
+              <span class="products__like"></span>
+              <div class="products__review">
+                <img src="../src/assets/metacritic.svg" width="32" height="32" alt="" class="products__review-platform">
+                <span class="products__review-count">333</span>
+              </div>
+            </div>
+            <button class="products__button products__button--delete">
+              <span class="visually-hidden">Удалить</span>
+            </button>
+            <a href="" class="products__button products__button--edit">
+              <span class="visually-hidden">Редактировать</span>
+            </a>
+          </li>
+          <li class="products__item">
+            <img src="../src/assets/deus-ex-human-revolution---directors-cut.jpg" alt="" class="products__preview"
+              width="320" height="300">
+            <h3 class="products__title">
+              just-cause-2
+            </h3>
+            <p class="products__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolorem quia eligendi explicabo quod
+              molestiae tenetur officiis saepe sint deserunt nemo iste ipsum alias? Quaerat, quod. Exercitationem,
+              maiores eligendi! Totam!
+            </p>
+            <div class="products__info">
+              <span class="products__like products__like--active"></span>
+              <div class="products__review">
+                <img src="../src/assets/metacritic.svg" width="32" height="32" alt="" class="products__review-platform">
+                <span class="products__review-count">333</span>
+              </div>
+            </div>
+            <button class="products__button products__button--delete">
+              <span class="visually-hidden">Удалить</span>
+            </button>
+            <a href="" class="products__button products__button--edit">
+              <span class="visually-hidden">Редактировать</span>
+            </a>
+          </li>
+          <li class="products__item">
+            <img src="../src/assets/just-cause-2.png" alt="" class="products__preview" width="320" height="300">
+            <h3 class="products__title">
+              just-cause-2
+            </h3>
+            <p class="products__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolorem quia eligendi explicabo quod
+              molestiae tenetur officiis saepe sint deserunt nemo iste ipsum alias? Quaerat, quod. Exercitationem,
+              maiores eligendi! Totam!
+            </p>
+            <div class="products__info">
+              <span class="products__like products__like--active"></span>
+              <div class="products__review">
+                <img src="../src/assets/metacritic.svg" width="32" height="32" alt="" class="products__review-platform">
+                <span class="products__review-count">333</span>
+              </div>
+            </div>
+            <button class="products__button products__button--delete">
+              <span class="visually-hidden">Удалить</span>
+            </button>
+            <a href="" class="products__button products__button--edit">
+              <span class="visually-hidden">Редактировать</span>
+            </a>
+          </li>
+        </ul> -->
+        <span class="empty-file">
+          Нету доступных товаров
+        </span>
+        <div class="modal modal--active">
+          <div class="modal__content">
+            <h2 class="modal__title">
+              Редактирование
+            </h2>
+            <form class="modal__form">
+              <div class="form__row">
+                <label for="title" class="form__label">
+                  Название товара
+                </label>
+                <input type="text" name="title" id="title" class="form__input">
+              </div>
+              <div class="form__row">
+                <label for="thumb" class="form__label">
+                  Ссылка на изображение
+                </label>
+                <input type="text" name="preview" id="thumb" class="form__input">
+              </div>
+              <div class="form__row">
+                <label for="normalPrice" class="form__label">
+                  Цена товара
+                </label>
+                <input type="text" name="price" id="normalPrice" class="form__input">
+              </div>
+              <div class="form__row">
+                <label for="steamRatingPercent" class="form__label">
+                  Оценка в стиме
+                </label>
+                <input type="text" name="review-steam" id="steamRatingPercent" class="form__input">
+              </div>
+              <div class="form__row">
+                <label for="metacriticScore" class="form__label">
+                  Оценка на metacritic
+                </label>
+                <input type="text" name="review-metacritic" id="metacriticScore" class="form__input">
+              </div>
+            </form>
+            <button class="modal__send">
+              <span> Изменить данные </span>
+            </button>
+            <button class="modal__close">
+              <span class="visually-hidden">Закрыть окно релактирования</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
