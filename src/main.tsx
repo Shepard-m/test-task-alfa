@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { BrowserRouter } from 'react-router-dom/dist';
+import { BrowserRouter, ru } from 'react-router-dom/dist';
 import App from './App.tsx'
 import './index.css'
 import { HelmetProvider } from 'react-helmet-async'
@@ -15,10 +15,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <StrictMode>
     <HelmetProvider>
-      <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <BrowserRouter basename='/test-task-alfa/'>
+        <Provider store={store}>
+          <App />
+        </Provider>
       </BrowserRouter>
     </HelmetProvider>
   </StrictMode>
