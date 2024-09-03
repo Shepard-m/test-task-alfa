@@ -49,11 +49,11 @@ export default function ProductPage() {
                   <h2 className="info-product__reviews-title">Оценка на сервисах:</h2>
                   <div className="info-product__reviews-wrapper">
                     <div className="info-product__review">
-                      <img src="../src/assets/metacritic.svg" alt={'metacritic'} width={32} height={32} />
+                      <img src="./img/metacritic.svg" alt={'metacritic'} width={32} height={32} />
                       <span className="info-product__review-count">{product?.metacriticScore}</span>
                     </div>
                     <div className="info-product__review">
-                      <img src="../src/assets/steam.svg" alt={'steam'} width={32} height={32} />
+                      <img src="./img/steam.svg" alt={'steam'} width={32} height={32} />
                       <span className="info-product__review-count">{product?.steamRatingPercent}</span>
                     </div>
                   </div>
