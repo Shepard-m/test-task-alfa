@@ -11,7 +11,8 @@ import EmptyProducts from "./empty-products";
 
 export default function ProductsPage() {
   const dispatch = useAppDispatch();
-  const filterProducts = useAppSelector(selectorsProduct.productsFilter)
+  const products = useAppSelector(selectorsProduct.products);
+  const filterProducts = useAppSelector(selectorsProduct.productsFilter);
   const [isFilter, setIsFilter] = useState<boolean>(false);
   useEffect(() => {
     dispatch(fetchGetProducts())
@@ -20,6 +21,11 @@ export default function ProductsPage() {
       dispatch(actionsProduct.initialState())
     });
   }, [])
+
+  useEffect(() => {
+    dispatch(actionsProduct.filterProduct({like: isFilter}));
+    console.log(isFilter);
+  }, [products])
 
   function onFilterProduct() {
     dispatch(actionsProduct.filterProduct({like: !isFilter}));

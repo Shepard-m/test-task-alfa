@@ -83,3 +83,5 @@ export const TextErrorsFormCreateProduct = {
 export const TextSuccess = {
   CREATE_PRODUCT: 'Товар успешно создан',
 }
+
+export const scrollLock = 'scroll-lock';

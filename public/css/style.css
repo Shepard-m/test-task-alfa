@@ -5,6 +5,11 @@
 
 html {
   min-height: 100%;
+  position: relative;
+}
+
+body {
+  min-height: 100vh;
 }
 
 :root {
@@ -128,6 +133,56 @@ html {
   color: #333333;
   border: none;
   outline: none;
+}
+
+.form-search__select-list {
+  position: absolute;
+  top: 49px;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  min-height: 100%;
+  max-height: 176px;
+  margin: 0;
+  padding: 8px 0 8px 4px;
+  overflow-y: scroll;
+  list-style: none;
+  background: #ffffff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 16px rgba(56, 56, 117, 0.2);
+  box-shadow: 0 4px 16px rgba(56, 56, 117, 0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.form-search__select-item {
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #333333;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.form-search.list-opened form label {
+  border: 2px solid #7575e2;
+}
+
+.form-search.list-opened .form-search__select-list {
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-search.list-opened .form-search__reset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .form-search__reset {
@@ -452,4 +507,71 @@ html {
   align-items: center;
   flex-grow: 1;
   justify-content: center;
+}
+
+.modal {
+  position: absolute;
+  background-color: var(--black);
+  color: var(--white);
+  display: none;
+  top: 30%;
+  left: 45%;
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+.modal--active {
+  display: block;
+}
+.modal__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.modal__title {
+  text-align: center;
+}
+.modal__form {
+}
+.form__row {
+}
+.form__label {
+  margin-bottom: 5px;
+}
+.form__input {
+  width: 98%;
+}
+
+.modal__send {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--white);
+  border: 2px solid #7575e2;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.modal__close {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+.modal__close::before {
+  content: url(../../src/assets/close.svg);
+  width: 20px;
+  height: 20px;
+}
+
+.scroll-lock {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.397);
 }

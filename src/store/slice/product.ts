@@ -109,6 +109,15 @@ const productSlice = createSlice({
       state.productsFilter = [...state.productsFilter, newProduct];
       
       deleteAndCreateProductLocalStorage(newProduct);
+    },
+    editProduct: (state, action: PayloadAction<{product: Omit<TFormCreateProduct, 'gameID'>, id: number}>) => {
+      const id = action.payload.id;
+      const product = state.products.find((e) => +e.gameID === id);
+      if (product !== undefined) {
+        const newProduct = {...product, ...action.payload.product};
+        const newProducts = state.products.filter((e) => +e.gameID !== id);
+        state.products = [newProduct, ...newProducts];
+      }
     }
   },
   selectors: {

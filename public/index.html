@@ -9,7 +9,7 @@
   <title>Test-Task-Alfa</title>
 </head>
 
-<body>
+<body class="scroll-lock">
   <header class="header">
     <div class="container">
       <div class="header__content">
@@ -34,6 +34,13 @@
                   <use xlink:href="#icon-lens" />
                 </svg>
                 <input class="form-search__input" autocomplete="off" placeholder="Поиск по сайту" type="text">
+                <ul class="form-search__select-list">
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 8i</li>
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 7i</li>
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 6i</li>
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 5i</li>
+                  <li class="form-search__select-item" tabindex="0">Cannonball Pro MX 4i</li>
+                </ul>
               </label>
             </form>
             <button class="form-search__reset">
@@ -184,6 +191,51 @@
         <span class="empty-file">
           Нету доступных товаров
         </span>
+        <div class="modal modal--active">
+          <div class="modal__content">
+            <h2 class="modal__title">
+              Редактирование
+            </h2>
+            <form class="modal__form">
+              <div class="form__row">
+                <label for="title" class="form__label">
+                  Название товара
+                </label>
+                <input type="text" name="title" id="title" class="form__input">
+              </div>
+              <div class="form__row">
+                <label for="thumb" class="form__label">
+                  Ссылка на изображение
+                </label>
+                <input type="text" name="preview" id="thumb" class="form__input">
+              </div>
+              <div class="form__row">
+                <label for="normalPrice" class="form__label">
+                  Цена товара
+                </label>
+                <input type="text" name="price" id="normalPrice" class="form__input">
+              </div>
+              <div class="form__row">
+                <label for="steamRatingPercent" class="form__label">
+                  Оценка в стиме
+                </label>
+                <input type="text" name="review-steam" id="steamRatingPercent" class="form__input">
+              </div>
+              <div class="form__row">
+                <label for="metacriticScore" class="form__label">
+                  Оценка на metacritic
+                </label>
+                <input type="text" name="review-metacritic" id="metacriticScore" class="form__input">
+              </div>
+            </form>
+            <button class="modal__send">
+              <span> Изменить данные </span>
+            </button>
+            <button class="modal__close">
+              <span class="visually-hidden">Закрыть окно релактирования</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </main>
